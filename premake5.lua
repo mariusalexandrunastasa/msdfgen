@@ -2,7 +2,7 @@ project "freetype"
     location "freetype"
     kind "StaticLib"
     language "C"
-    staticruntime "off"
+    staticruntime "on"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("obj/" .. outputdir .. "/%{prj.name}")
@@ -54,7 +54,11 @@ project "freetype"
         "freetype/src/truetype/truetype.c",
         "freetype/src/type1/type1.c",
         "freetype/src/type42/type42.c",
-        "freetype/src/winfonts/winfnt.c"
+        "freetype/src/winfonts/winfnt.c",
+        "freetype/src/svg/ftsvg.c",
+        "freetype/src/hvf/hvfdrv.c",
+        "freetype/src/hvf/hvfload.c",
+        "freetype/src/hvf/hvfobjs.c"
     }
 
     includedirs
@@ -66,7 +70,7 @@ project "freetype"
     {
         "FT2_BUILD_LIBRARY",
         "_CRT_SECURE_NO_WARNINGS",
-        "_CRT_NONSTDC_NO_WARNINGS",
+        "_CRT_NONSTDC_NO_WARNINGS"
     }
 
     filter "system:windows"
@@ -95,7 +99,7 @@ project "tinyxml2"
     kind "StaticLib"
     language "C++"
     cppdialect "C++20"
-    staticruntime "off"
+    staticruntime "on"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("obj/" .. outputdir .. "/%{prj.name}")
@@ -134,7 +138,7 @@ project "msdfgen"
     kind "StaticLib"
     language "C++"
     cppdialect "C++20"
-    staticruntime "off"
+    staticruntime "on"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("obj/" .. outputdir .. "/%{prj.name}")
