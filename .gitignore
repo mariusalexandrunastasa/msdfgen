@@ -42,3 +42,7 @@ out/
 # build output
 bin/
 obj/
+
+# GNU build files
+*.make
+Makefile
