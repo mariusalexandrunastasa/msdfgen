@@ -70,10 +70,10 @@ Some of the important ones are:
    (png, bmp, tiff, rgba, fl32, txt, bin). Otherwise, use -format.
  - **-dimensions \<width\> \<height\>** &ndash; specifies the dimensions of the output distance field (in pixels).
  - **-range \<range\>**, **-pxrange \<range\>** &ndash; specifies the width of the range around the shape
-   between the minimum and maximum representable signed distance in shape units or distance field pixels, respectivelly.
+   between the minimum and maximum representable signed distance in shape units or distance field pixels, respectively.
  - **-scale \<scale\>** &ndash; sets the scale used to convert shape units to distance field pixels.
- - **-translate \<x\> \<y\>** &ndash; sets the translation of the shape in shape units. Otherwise the origin (0, 0)
-   lies in the bottom left corner.
+ - **-translate \<x\> \<y\>**, **-pxtranslate \<x\> \<y\>** &ndash; sets the translation of the shape in shape units
+   or distance field pixels. Otherwise the origin (0, 0) lies in the bottom left corner.
  - **-autoframe** &ndash; automatically frames the shape to fit the distance field. If the output must be precisely aligned,
    you should manually position it using -translate and -scale instead.
  - **-angle \<angle\>** &ndash; specifies the maximum angle to be considered a corner.
